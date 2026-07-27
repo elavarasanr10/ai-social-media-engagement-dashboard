@@ -1,0 +1,56 @@
+import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
+
+np.random.seed(42)
+n_rows = 100
+
+platforms = ['Instagram', 'LinkedIn', 'YouTube', 'X/Twitter', 'Facebook']
+post_types = ['Carousel', 'Reel', 'Single Image', 'Document', 'Video', 'Text Thread']
+themes = ['Educational', 'Thought Leadership', 'Tutorial', 'Industry Trends', 'Product Demo', 'Case Study', 'Behind the Scenes']
+campaigns = ['Summer_Growth', 'Organic_Brand', 'Academy_Launch', 'Product_Promo', 'Culture_Push']
+
+dates = [datetime(2026, 7, 1) + timedelta(days=int(i)) for i in range(n_rows)]
+
+data = []
+for i in range(n_rows):
+    platform = np.random.choice(platforms)
+    impressions = int(np.random.randint(2000, 50000))
+    reach = int(impressions * np.random.uniform(0.75, 0.90))
+    
+    # Calculate realistic engagement dependent on reach
+    likes = int(reach * np.random.uniform(0.03, 0.08))
+    comments = int(likes * np.random.uniform(0.05, 0.15))
+    shares = int(likes * np.random.uniform(0.08, 0.25))
+    saves = int(likes * np.random.uniform(0.10, 0.40))
+    
+    total_eng = likes + comments + shares + saves
+    eng_rate = round((total_eng / reach) * 100, 2)
+    
+    data.append({
+        'Post_ID': f'POST_{i+1:03d}',
+        'Platform': platform,
+        'Post_Date': dates[i].strftime('%Y-%m-%d'),
+        'Post_Type': np.random.choice(post_types),
+        'Content_Theme': np.random.choice(themes),
+        'Caption': f"Sample caption analyzing social media strategies for post #{i+1}",
+        'Hashtags_Used': "#DigitalMarketing #Analytics #Growth",
+        'Impressions': impressions,
+        'Reach': reach,
+        'Likes': likes,
+        'Comments': comments,
+        'Shares': shares,
+        'Saves': saves,
+        'Profile_Visits': int(reach * np.random.uniform(0.01, 0.05)),
+        'Link_Clicks': int(reach * np.random.uniform(0.005, 0.03)),
+        'Engagement_Rate_%': eng_rate,
+        'Follower_Growth': int(np.random.randint(5, 500)),
+        'Sentiment_Score': round(np.random.uniform(-0.2, 0.95), 2),
+        'AI_Content_Score': int(np.random.randint(55, 98)),
+        'Best_Posting_Time': f"{np.random.choice([8, 9, 12, 17, 18, 19, 20]):02d}:00",
+        'Campaign_Name': np.random.choice(campaigns)
+    })
+
+df = pd.DataFrame(data)
+df.to_csv('social_media_engagement_data.csv', index=False)
+print("Dataset created: social_media_engagement_data.csv")
