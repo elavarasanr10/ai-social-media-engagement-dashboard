@@ -62,11 +62,11 @@ export default function KpiCards() {
                     </div>
                   </div>
                 </div>
-              ) : (
+              ) : kpi.spark ? (
                 <div className={`h-8 ${a.text}`}>
                   <Sparkline data={kpi.spark} />
                 </div>
-              )}
+              ) : null}
             </div>
           </div>
         );

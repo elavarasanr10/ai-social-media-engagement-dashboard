@@ -13,7 +13,7 @@ export interface Kpi {
   trendUnit?: '%' | 'pts';
   accent: AccentKey;
   icon: 'reach' | 'engagement' | 'followers' | 'sentiment' | 'ai';
-  spark: number[];
+  spark?: number[];
   ring?: number;
   ringMax?: number;
   badge?: string;
