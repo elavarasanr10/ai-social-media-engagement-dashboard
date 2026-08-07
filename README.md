@@ -1,6 +1,6 @@
 # 📊 AI-Powered Social Media Engagement Dashboard
 
-![Dashboard Preview](dashboard/screenshots/socialmedia_dashboard1.png)
+<img width="1504" height="815" alt="socialmedia_dashboard1" src="https://github.com/user-attachments/assets/bd7a2ad3-0327-4002-9058-4a494e782814" />
 
 ## 📌 Executive Summary & Objective
 Modern brand growth requires moving beyond vanity metrics to understand true content performance, emotional resonance, and audience conversion. This project presents a full-stack **AI-Powered Social Media Engagement Dashboard** designed for digital marketing agencies, brand strategists, and analytics teams to monitor performance, predict content efficacy, and optimize multi-channel publishing strategies.
