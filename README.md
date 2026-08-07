@@ -1,8 +1,6 @@
 # 📊 AI-Powered Social Media Engagement Dashboard
 
-![Dashboard Preview](<img width="1901" height="659" alt="image" src="https://github.com/user-attachments/assets/5a658ebb-310f-40af-8f11-c3bea7157d5a" />
-
-)
+![Dashboard Preview](dashboard/screenshots/socialmedia_dashboard1.png)
 
 ## 📌 Executive Summary & Objective
 Modern brand growth requires moving beyond vanity metrics to understand true content performance, emotional resonance, and audience conversion. This project presents a full-stack **AI-Powered Social Media Engagement Dashboard** designed for digital marketing agencies, brand strategists, and analytics teams to monitor performance, predict content efficacy, and optimize multi-channel publishing strategies.
@@ -58,4 +56,4 @@ $$\text{Content Performance Index} = (0.4 \times \text{Eng Rate}) + (0.3 \times 
 3. Access the live interactive web dashboard via the link provided in the repository header.
 
 ---
-*Maintained by [Elavarasan-R] — Digital Marketing & Analytics Strategist*
+*Maintained by [Elavarasan R] — Digital Marketing & Analytics Strategist*
